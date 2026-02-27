@@ -109,9 +109,6 @@ pewpew.increase_score_streak_of_player(0, 25)
     end)
 end
 
-
--- Create a new enemy every 101 tick
-
 local time = 0
 local baf_spawn_interval = 41
 local min_baf_interval = 10
