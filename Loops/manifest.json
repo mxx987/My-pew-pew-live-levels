@@ -1,0 +1,9 @@
+{
+  "name":"#ffff00ffLoops",
+  "descriptions":["unbearable gameplay"],
+  "information":"i don't like the player wall trail mechanic",
+  "entry_point":"level.lua",
+  "has_score_leaderboard":true,
+  "rank_thresholds_1p":{"bronze":5000, "silver":7500, "gold":15000},
+    "speed_thresholds_1p":{"bronze":5100, "silver":4050, "gold":3600}
+}
