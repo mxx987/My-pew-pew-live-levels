@@ -1,0 +1,9 @@
+{
+  "name":"#808080ffCreeps",
+  "descriptions":["they #ff0000fffollow you!"],
+  "information":"stay away",
+  "entry_point":"level.lua",
+  "has_score_leaderboard":true,
+  "rank_thresholds_1p":{"bronze":15000, "silver":30000, "gold":45000},
+  "speed_thresholds_1p":{"bronze":5400, "silver":4500, "gold":4050}
+}
