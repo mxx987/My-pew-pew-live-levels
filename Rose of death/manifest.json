@@ -1,0 +1,8 @@
+{
+  "name":"#ff00ffffRose Of #ff0000ffDEATH",
+  "descriptions":["Aren't roses usually #ff0000ffnice?"],
+  "information":"harder version for testing",
+  "entry_point":"level.lua",
+  "has_score_leaderboard":true,
+  "rank_thresholds_1p":{"bronze":7500, "silver":15000, "gold":25000}
+}
