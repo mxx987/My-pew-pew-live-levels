@@ -39,7 +39,7 @@ pewpew.configure_player(0, {shield = 2})
 -- Create the player's ship at the center of the map.
 local ship_id = pewpew.new_player_ship(width / 2fx, height / 2fx, 0)
 
-pewpew.configure_player_ship_wall_trail(ship_id, {wall_length = 1800})
+pewpew.configure_player_ship_wall_trail(ship_id, {wall_length = 2000})
 
 pewpew.configure_player(0, {
   move_joystick_color = 0xffff00ff,
@@ -47,12 +47,12 @@ pewpew.configure_player(0, {
 })
 
 local time = 0
-local bafs_spawn_interval = 45
-local min_bafs_interval = 10
+local bafs_spawn_interval = 40
+local min_bafs_interval = 15
 local cubes_spawn_interval = 150
-local min_cubes_interval = 25
-local mothership_spawn_interval = 450
-local min_mothership_interval = 100
+local min_cubes_interval = 30
+local mothership_spawn_interval = 440
+local min_mothership_interval = 90
 -- A function that will get called every game tick, which is 30 times per seconds.
 function level_tick()
   time = time + 1
@@ -69,11 +69,11 @@ if time % 60 == 0 and bafs_spawn_interval > min_bafs_interval then
   
   
   if time % 150 == 0 and cubes_spawn_interval > min_cubes_interval then
-    cubes_spawn_interval = cubes_spawn_interval - 1.5
+    cubes_spawn_interval = cubes_spawn_interval - 1
   end
   
   if time % 150 == 0 and mothership_spawn_interval > min_mothership_interval then
-    mothership_spawn_interval = mothership_spawn_interval - 2
+    mothership_spawn_interval = mothership_spawn_interval - 1
   end
   
   
