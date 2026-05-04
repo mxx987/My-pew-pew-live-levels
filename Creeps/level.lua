@@ -26,6 +26,7 @@ local walls = pewpew.new_customizable_entity(width / 2fx, height / 2fx)
 pewpew.customizable_entity_set_mesh(walls, "/dynamic/walls.lua", 0)
 pewpew.customizable_entity_set_mesh_scale(walls, width / 900fx)
 pewpew.customizable_entity_set_mesh_color(walls, 0x999999ff)
+
 -- Configure the player, with 2 shields.
 pewpew.configure_player(0, {shield = 2})
 
@@ -148,6 +149,9 @@ local current_angle = 0fx
             dx, dy = (dx * 96fx) / 100fx, (dy * 96fx) / 100fx
         end
         pewpew.entity_set_position(entity_id, ex + dx, ey + dy)
+              pewpew.customizable_entity_configure_wall_collision(lm , true , function()
+  end)
+  
     end)
 end
 
@@ -167,19 +171,19 @@ local time = 0
 function level_tick()
   time = time + 1
 
-  if time % 150 == 0 and death_mace_spawn_interval > min_death_mace_interval then
+  if time % 140 == 0 and death_mace_spawn_interval > min_death_mace_interval then
     death_mace_spawn_interval = death_mace_spawn_interval - 1
   end
 
-if time % 41 == 0 and crowder_spawn_interval > min_crowder_interval then
+if time % 60 == 0 and crowder_spawn_interval > min_crowder_interval then
     crowder_spawn_interval = crowder_spawn_interval - 1
   end
 
-if time % 61 == 0 and cube_spawn_interval > min_cube_interval then
+if time % 60 == 0 and cube_spawn_interval > min_cube_interval then
     cube_spawn_interval = cube_spawn_interval - 1
   end
   
-  if time % 91 == 0 and intertac_spawn_interval > min_intertac_interval then
+  if time % 90 == 0 and intertac_spawn_interval > min_intertac_interval then
     intertac_spawn_interval = intertac_spawn_interval - 1
   end
 
@@ -225,7 +229,7 @@ local x = fmath.random_fixedpoint(0fx, width)
         spawn_dash_mace(x, y)
     end
 
- if time % 601 == 0 then
+ if time % 600 == 0 then
  local x = fmath.random_fixedpoint(0fx, width)
     local y = fmath.random_fixedpoint(0fx, height)
 pewpew.new_bonus(x, y, pewpew.BonusType.SHIELD)
