@@ -87,7 +87,7 @@ local angle2 = 0fx
 local bonusradius = 160fx
 local max_bonusradius = 350fx
 local mothership_spawn_interval = 130
-local min_mothership_interval = 11
+local min_mothership_interval = 60
 -- A function that will get called every game tick, which is 30 times per seconds.
 function level_tick()
   time = time + 1
@@ -101,7 +101,7 @@ function level_tick()
     mothership_spawn_interval = mothership_spawn_interval - 1
   end
   
-  if time % 1010 == 0 and max_bonusradius > bonusradius then
+  if time % 900 == 0 and max_bonusradius > bonusradius then
     bonusradius = bonusradius + 1fx
   end
   
@@ -119,7 +119,7 @@ local angle = fmath.random_fixedpoint(0fx, fmath.tau())
 pewpew.new_mothership(x, y, pewpew.MothershipType.THREE_CORNERS, angle)
  end
 
-  if time % (mothership_spawn_interval - 15) == 0 then
+  if time % (mothership_spawn_interval - 10) == 0 then
   local x = width / 2fx
   local y = height / 2fx
 local angle = fmath.random_fixedpoint(0fx, fmath.tau())
@@ -134,7 +134,7 @@ pewpew.new_super_mothership(x,y,pewpew.MothershipType.THREE_CORNERS,angle)
  end
  
  --new bonus area
-   if time % 450 == 0 then
+   if time % 440 == 0 then
 pewpew.new_weapon_zone(400fx, 400fx, pewpew.CannonType.HEMISPHERE, pewpew.CannonFrequency.FREQ_5, {
     radius = bonusradius,
     number_of_sides = 6
@@ -143,14 +143,14 @@ pewpew.new_weapon_zone(400fx, 400fx, pewpew.CannonType.HEMISPHERE, pewpew.Cannon
  
  
  --small freezer bomb
-   if time % 250 == 0 then
+   if time % 240 == 0 then
     local x = fmath.random_fixedpoint(0fx, width)
     local y = fmath.random_fixedpoint(0fx, height)
 pewpew.new_bomb(x, y, pewpew.BombType.SMALL_FREEZE)
  end
  
  --shield bonus
-  if time % 2500 == 0 then
+  if time % 1800 == 0 then
     local x = fmath.random_fixedpoint(0fx, width)
     local y = fmath.random_fixedpoint(0fx, height)
 pewpew.new_bonus(x, y, pewpew.BonusType.SHIELD, {number_of_shields = 3})
