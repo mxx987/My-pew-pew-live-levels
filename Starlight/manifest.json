@@ -1,0 +1,9 @@
+{
+  "name":"#ffff00ffStarlight",
+  "descriptions":["Might need Stars for this one"],
+  "information":"got lazy with the background but it's good, it doesn't matter if it's lazy or not if it looks good righ?",
+  "entry_point":"level.lua",
+  "has_score_leaderboard":true,
+  "rank_thresholds_1p":{"bronze":7500, "silver":15000, "gold":30000},
+    "speed_thresholds_1p":{"bronze":5400, "silver":4500, "gold":3600}
+}
