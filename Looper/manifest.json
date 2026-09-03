@@ -1,0 +1,9 @@
+{
+  "name":"#ffff00ffLooper",
+  "descriptions":["you are the looper"],
+  "information":"this is a remake of my level loops, it is better in every way.",
+  "entry_point":"level.lua",
+  "has_score_leaderboard":true,
+  "rank_thresholds_1p":{"bronze":10000, "silver":25000, "gold":40000},
+    "speed_thresholds_1p":{"bronze":5100, "silver":4050, "gold":3600}
+}
