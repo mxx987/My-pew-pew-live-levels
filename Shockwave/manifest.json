@@ -1,0 +1,8 @@
+{
+  "name":"#0000ffffShock#3357ffffwave",
+  "descriptions":["WAVES"],
+  "information":"shotgun weapon, this is probably the worst level I made in terms of looks but the gameplay is quite fun.",
+  "entry_point":"level.lua",
+  "has_score_leaderboard":true,
+  "rank_thresholds_1p":{"bronze":25000, "silver":50000, "gold":75000}
+}
