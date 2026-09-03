@@ -1,0 +1,9 @@
+{
+  "name":"#ffff00ffLoops OLD",
+  "descriptions":["When yellow meets trail"],
+  "information":"YOU are Looping around them! OLD version of the level LOOPER, the name is changed now!",
+  "entry_point":"level.lua",
+  "has_score_leaderboard":true,
+  "rank_thresholds_1p":{"bronze":5000, "silver":7500, "gold":15000},
+    "speed_thresholds_1p":{"bronze":5100, "silver":4050, "gold":3600}
+}
