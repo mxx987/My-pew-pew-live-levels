@@ -1,0 +1,8 @@
+{
+  "name":"#8000ffffViolet",
+  "descriptions":["Stay inside the Shooting range"],
+  "information":"A purple level to full your purple life, it is pretty hard tho!",
+  "entry_point":"level.lua",
+  "has_score_leaderboard":true,
+  "rank_thresholds_1p":{"bronze":25000, "silver":55000, "gold":80000}
+}
